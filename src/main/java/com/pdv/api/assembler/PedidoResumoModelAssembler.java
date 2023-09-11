@@ -1,15 +1,14 @@
 package com.pdv.api.assembler;
 
-import java.util.List;
-import java.util.stream.Collectors;
 
-import com.pdv.api.model.input.model.PedidoResumoModel;
+import com.pdv.api.model.PedidoResumoModel;
 import com.pdv.domain.model.Pedido;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Component
 public class PedidoResumoModelAssembler {
@@ -23,7 +22,7 @@ public class PedidoResumoModelAssembler {
 	
 	public List<PedidoResumoModel> toCollectionModel(List<Pedido> pedidos) {
 		return pedidos.stream()
-				.map(this::toModel)
+				.map(pedido -> toModel(pedido))
 				.collect(Collectors.toList());
 	}
 	

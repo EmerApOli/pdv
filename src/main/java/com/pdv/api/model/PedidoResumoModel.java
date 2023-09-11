@@ -1,11 +1,11 @@
-package com.pdv.api.model.input.model;
+package com.pdv.api.model;
+
+import com.pdv.domain.model.ItemPedido;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
-
-import com.pdv.domain.model.Pedido;
-import lombok.Getter;
-import lombok.Setter;
 
 @Setter
 @Getter

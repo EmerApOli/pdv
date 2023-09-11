@@ -1,11 +1,11 @@
-package com.pdv.api.model.input;
+package com.pdv.api.model;
+
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
-
-import lombok.Getter;
-import lombok.Setter;
 
 @Setter
 @Getter
@@ -21,5 +21,6 @@ public class PedidoModel {
 	private OffsetDateTime dataEntrega;
 	private OffsetDateTime dataCancelamento;
 
+	private List<ItemPedidoModel> itens;
 	
 }

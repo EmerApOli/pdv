@@ -1,8 +1,9 @@
-package com.pdv.api.assembler;
-
+package com.pdv.api.model.input;
 
 import lombok.Getter;
 import lombok.Setter;
+
+
 
 @Setter
 @Getter

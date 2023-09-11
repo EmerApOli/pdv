@@ -1,27 +1,18 @@
-package com.pdv.api.model.input;
+package com.pdv.api.model;
 
 import lombok.Getter;
 import lombok.Setter;
-
-
 
 import java.math.BigDecimal;
 
 @Setter
 @Getter
-public class ProdutoInput {
+public class ProdutoModel {
 
-	//@NotBlank
+	private Long id;
 	private String nome;
-	
-//	@NotBlank
 	private String descricao;
-	
-	//@NotNull
-//	@PositiveOrZero
 	private BigDecimal preco;
-	
-//	@NotNull
 	private Boolean ativo;
 	
 }
