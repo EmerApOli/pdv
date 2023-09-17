@@ -55,5 +55,7 @@ public class Pedido {
 		
 	//	this.valorTotal = this.subtotal.add(this.taxaFrete);
 	}
+
+
 	
 }

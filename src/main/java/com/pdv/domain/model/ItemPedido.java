@@ -16,7 +16,7 @@ import java.math.BigDecimal;
 @Entity
 public class ItemPedido {
 
-
+	@EqualsAndHashCode.Include
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
@@ -27,7 +27,6 @@ public class ItemPedido {
 	private String observacao;
 
 	@ManyToOne
-	@JsonIgnoreProperties
 	@JoinColumn(nullable = false)
 	private Pedido pedido;
 
@@ -49,5 +48,7 @@ public class ItemPedido {
 
 		this.setPrecoTotal(precoUnitario.multiply(new BigDecimal(quantidade)));
 	}
-	
+
 }
+	
+
