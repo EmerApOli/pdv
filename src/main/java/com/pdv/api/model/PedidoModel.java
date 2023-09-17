@@ -11,7 +11,7 @@ import java.util.List;
 @Getter
 public class PedidoModel {
 
-	private Long codigo;
+	private Long id;
 	private BigDecimal subtotal;
 	private BigDecimal taxaFrete;
 	private BigDecimal valorTotal;
