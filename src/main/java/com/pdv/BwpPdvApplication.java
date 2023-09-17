@@ -17,4 +17,7 @@ public class BwpPdvApplication {
 	public static <T> T getBean(Class<T> type) {
 		return APPLICATION_CONTEXT.getBean(type);
 	}
+
+
+
 }
