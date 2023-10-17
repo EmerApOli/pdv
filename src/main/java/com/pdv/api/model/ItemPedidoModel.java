@@ -14,6 +14,7 @@ public class ItemPedidoModel {
 	private Integer quantidade;
 	private BigDecimal precoUnitario;
 	private BigDecimal precoTotal;
+	private BigDecimal desconto;
 	private String observacao;
 	
 }

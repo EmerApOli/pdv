@@ -13,6 +13,7 @@ public class ProdutoModel {
 	private String nome;
 	private String descricao;
 	private BigDecimal preco;
+	private BigDecimal desconto;
 	private Boolean ativo;
 	
 }

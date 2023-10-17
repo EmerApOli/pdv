@@ -4,8 +4,6 @@ import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
-
-
 import java.math.BigDecimal;
 
 @Data
@@ -25,7 +23,7 @@ public class Produto {
 	
 	@Column(nullable = false)
 	private BigDecimal preco;
-	
+
 	@Column(nullable = false)
 	private Boolean ativo;
 

@@ -3,8 +3,6 @@ package com.pdv.api.model.input;
 import lombok.Getter;
 import lombok.Setter;
 
-
-
 import java.math.BigDecimal;
 
 @Setter

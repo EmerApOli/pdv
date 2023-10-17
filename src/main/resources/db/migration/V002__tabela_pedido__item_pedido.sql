@@ -28,6 +28,7 @@ create table item_pedido (
   preco_unitario decimal(10,2) not null,
   preco_total decimal(10,2) not null,
   observacao varchar(255) null,
+   desconto decimal(10,2) null,
   pedido_id bigint not null,
   produto_id bigint not null,
 
@@ -42,5 +43,5 @@ create table item_pedido (
 
 
 
- insert into item_pedido(quantidade, preco_unitario , preco_total , observacao , pedido_id,produto_id)
-values (23,4.5,5.4,'primeiro',1,1);
+--insert into item_pedido(quantidade, preco_unitario , preco_total , observacao , desconto, pedido_id,produto_id)
+--values (23,4.5,5.4,'primeiro',1,1);

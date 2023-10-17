@@ -2,7 +2,6 @@ package com.pdv.api.assembler;
 
 import com.pdv.api.model.PedidoModel;
 import com.pdv.domain.model.Pedido;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;

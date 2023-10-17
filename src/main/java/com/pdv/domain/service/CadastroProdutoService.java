@@ -2,7 +2,6 @@ package com.pdv.domain.service;
 
 import com.pdv.domain.exception.ProdutoNaoEncontradoException;
 import com.pdv.domain.model.Produto;
-
 import com.pdv.domain.repository.ProdutoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

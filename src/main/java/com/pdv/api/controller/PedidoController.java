@@ -11,14 +11,14 @@ import com.pdv.domain.exception.NegocioException;
 import com.pdv.domain.model.Pedido;
 import com.pdv.domain.repository.PedidoRepository;
 import com.pdv.domain.service.EmissaoPedidoService;
-;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-
 import java.util.List;
+
+;
 
 @RestController
 @RequestMapping(value = "/pedidos")

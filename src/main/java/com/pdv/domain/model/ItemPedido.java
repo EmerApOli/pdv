@@ -1,12 +1,9 @@
 package com.pdv.domain.model;
 
 
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-
-
 
 import java.math.BigDecimal;
 
@@ -25,6 +22,8 @@ public class ItemPedido {
 	private BigDecimal precoTotal;
 	private Integer quantidade;
 	private String observacao;
+	private BigDecimal desconto;
+
 
 	@ManyToOne
 	@JoinColumn(nullable = false)
@@ -48,6 +47,8 @@ public class ItemPedido {
 
 		this.setPrecoTotal(precoUnitario.multiply(new BigDecimal(quantidade)));
 	}
+
+
 
 }
 	

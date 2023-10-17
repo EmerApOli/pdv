@@ -3,7 +3,6 @@ package com.pdv.domain.service;
 import com.pdv.domain.exception.PedidoNaoEncontradoException;
 import com.pdv.domain.model.Pedido;
 import com.pdv.domain.model.Produto;
-
 import com.pdv.domain.repository.PedidoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -28,7 +27,7 @@ public class EmissaoPedidoService {
 	public Pedido emitir(Pedido pedido) {
 		validarPedido(pedido);
 		validarItens(pedido);
-
+        pedido.calcularDesconto();
 		pedido.setTaxaFrete(pedido.getTaxaFrete());
 		pedido.calcularValorTotal();
 

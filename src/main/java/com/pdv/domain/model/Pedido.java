@@ -6,7 +6,6 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import org.hibernate.annotations.CreationTimestamp;
 
-
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
@@ -56,6 +55,28 @@ public class Pedido {
 	//	this.valorTotal = this.subtotal.add(this.taxaFrete);
 	}
 
+ public void calcularDesconto(){
 
-	
+
+	 getItens().forEach(item-> {
+
+
+		  if(item.getQuantidade() >= 10) {
+
+			  item.setDesconto(new BigDecimal(String.valueOf(item.getPrecoUnitario().multiply(BigDecimal.valueOf(0.10)))));
+
+
+		  }
+
+
+	 });
+
+
+
+
+
+ }
+
+
+
 }

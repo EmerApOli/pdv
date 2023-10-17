@@ -2,7 +2,6 @@ package com.pdv.core.modelmapper;
 
 import com.pdv.api.model.input.ItemPedidoInput;
 import com.pdv.domain.model.ItemPedido;
-
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
