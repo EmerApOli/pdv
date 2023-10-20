@@ -65,6 +65,8 @@ public class Pedido {
 
 		/// 1 estou na breach emerson - 1 alteração
 
+	    ///passei para breach remota  para fazer o commit- 1- alteração.
+
 	 getItens().stream()
 			 .filter(e-> {
 					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
