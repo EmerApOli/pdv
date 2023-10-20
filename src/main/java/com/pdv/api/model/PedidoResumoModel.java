@@ -7,6 +7,7 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.List;
 
+
 @Setter
 @Getter
 public class PedidoResumoModel {

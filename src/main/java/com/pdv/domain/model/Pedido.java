@@ -9,6 +9,7 @@ import org.hibernate.annotations.CreationTimestamp;
 import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 @Data
@@ -43,7 +44,7 @@ public class Pedido {
 
 	@JsonIgnoreProperties
 	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
-	private List<ItemPedido> itens = new ArrayList<>();
+	private Collection<ItemPedido> itens = new ArrayList<>();
 
 	public void calcularValorTotal() {
 		getItens().forEach(ItemPedido::calcularPrecoTotal);
@@ -57,20 +58,13 @@ public class Pedido {
 
  public void calcularDesconto(){
 
+	 getItens().stream()
+			 .filter(e-> {
+					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
+             })
+			 .limit(2)
 
-	 getItens().forEach(item-> {
-
-
-		  if(item.getQuantidade() >= 10) {
-
-			  item.setDesconto(new BigDecimal(String.valueOf(item.getPrecoUnitario().multiply(BigDecimal.valueOf(0.10)))));
-
-
-		  }
-
-
-	 });
-
+			 .forEach(item->item.setDesconto(new BigDecimal(String.valueOf(item.getPrecoUnitario().multiply(BigDecimal.valueOf(0.10))))));
 
 
 
