@@ -71,6 +71,8 @@ public class Pedido {
 
 	   //commitar sem merger
 
+	 //entrou o calor na equipe e omerson alterou a memsma linha
+
 	 getItens().stream()
 			 .filter(e-> {
 					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
