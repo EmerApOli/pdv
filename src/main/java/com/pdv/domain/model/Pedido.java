@@ -62,7 +62,7 @@ public class Pedido {
 			 .filter(e-> {
 					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
              })
-			 .limit(2)
+
 
 			 .forEach(item->item.setDesconto(new BigDecimal(String.valueOf(item.getPrecoUnitario().multiply(BigDecimal.valueOf(0.10))))));
 
