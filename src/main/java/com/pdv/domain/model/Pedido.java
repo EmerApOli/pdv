@@ -69,6 +69,8 @@ public class Pedido {
 
 	   //solicitado tirar o limite
 
+	   //commitar sem merger
+
 	 getItens().stream()
 			 .filter(e-> {
 					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
