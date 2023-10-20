@@ -71,7 +71,7 @@ public class Pedido {
 
 	   //commitar sem merger
 
-	 getItens().stream()
+	 getItens().stream()   //mexi na mesma linha
 			 .filter(e-> {
 					 return e.getQuantidade() < 10 && e.getQuantidade() > 5  && e.getObservacao().equals("CUIDADO");
              })
