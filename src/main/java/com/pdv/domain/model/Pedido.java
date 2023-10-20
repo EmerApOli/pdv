@@ -42,6 +42,10 @@ public class Pedido {
 
 
 
+
+
+
+
 	@JsonIgnoreProperties
 	@OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL)
 	private Collection<ItemPedido> itens = new ArrayList<>();
@@ -57,6 +61,9 @@ public class Pedido {
 	}
 
  public void calcularDesconto(){
+
+
+		/// 1 estou na breach emerson - 1 alteração
 
 	 getItens().stream()
 			 .filter(e-> {
