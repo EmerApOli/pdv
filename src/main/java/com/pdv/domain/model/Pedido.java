@@ -10,7 +10,6 @@ import java.math.BigDecimal;
 import java.time.OffsetDateTime;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 @Data
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
@@ -52,13 +51,15 @@ public class Pedido {
 
 	public void calcularValorTotal() {
 		getItens().forEach(ItemPedido::calcularPrecoTotal);
-		
+
 		this.subtotal = getItens().stream()
-			.map(item -> item.getPrecoTotal())
-			.reduce(BigDecimal.ZERO, BigDecimal::add);
-		
-	//	this.valorTotal = this.subtotal.add(this.taxaFrete);
+				.map(item -> {
+					BigDecimal precoTotal = item.getPrecoTotal();
+					return precoTotal;
+				})
+				.reduce(BigDecimal.ZERO, BigDecimal::add);
 	}
+	//	this.valorTotal = this.subtotal.add(this.taxaFrete);
 
  public void calcularDesconto(){
 
