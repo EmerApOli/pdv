@@ -10,6 +10,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.Collection;
+import java.util.List;
+
 @Service
 public class UsuarioService {
 
@@ -17,15 +20,17 @@ public class UsuarioService {
 
     @Autowired
     //private ModelMapper modelMapper;
-    public  UsuarioDTO consultausuario() throws JsonProcessingException {
+    public Collection<UsuarioDTO> consultausuario() throws JsonProcessingException {
 
+        ObjectMapper mapper = new ObjectMapper();
 
-        RestTemplate restTemplate = new RestTemplate();
-        String  url = "http://localhost:3000/usuario"  ;
+       RestTemplate restTemplate = new RestTemplate();
+       String  url = "http://localhost:3000/usuario"  ;
 
-        // return  new mo().getForObject("http://localhost:3000/usuario",UsuarioDTO.class);
+        UsuarioDTO[] response = restTemplate.getForObject("http://localhost:3000/usuario",UsuarioDTO[].class);
 
-        return restTemplate.getForObject(url,UsuarioDTO.class);
+         return List.of(response);
+      //  return restTemplate.getForObject(url,UsuarioDTO[].class);
     }
 
 
