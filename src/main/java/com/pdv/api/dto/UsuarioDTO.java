@@ -9,11 +9,12 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
+import org.springframework.stereotype.Service;
 
 import java.io.Serializable;
 import java.time.OffsetDateTime;
 import java.util.Objects;
-
+@Service
 @Getter
 @Setter
 //@JsonFormat(shape = JsonFormat.Shape.ARRAY)
